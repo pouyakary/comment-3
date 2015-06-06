@@ -1,7 +1,13 @@
+
+<center>
+
+	<img src="readmeicon.png" width="125">
+
+</center>
+
 ![](screen.png)
 
 <br />
-
 # Comment
 
 What can I say? I love my style of code commenting. (Checkout [this](https://github.com/pmkary/Comment/blob/master/Comment/MainWindowController.swift) as an example). My style is so much clear, well sectioned and beautiful. However in a code of my style something like 68% of the LoC is `comment` + `whitespace`. You'll need a good comment generator. So... Here is the one! It supports all the possible KaryStyle comments and settings for all languages.
