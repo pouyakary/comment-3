@@ -1,9 +1,5 @@
 
-<center>
-
-	<img src="readmeicon.png" width="125">
-
-</center>
+<img src="readmeicon.png" width="125">
 
 ![](screen.png)
 
