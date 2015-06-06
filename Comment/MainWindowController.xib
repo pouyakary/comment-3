@@ -884,6 +884,16 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ze-QJ-Aok">
+                        <rect key="frame" x="171" y="564" width="73" height="32"/>
+                        <buttonCell key="cell" type="push" title="Copy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zSq-UF-vZW">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="OnCopyResult:" target="-2" id="ded-LZ-w7W"/>
+                        </connections>
+                    </button>
                     <box autoresizesSubviews="NO" title="Language Settings" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="p88-i9-VgI">
                         <rect key="frame" x="17" y="16" width="224" height="381"/>
                         <view key="contentView">
@@ -892,15 +902,21 @@
                             <subviews>
                                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0UP-Dn-8Qi">
                                     <rect key="frame" x="16" y="331" width="191" height="26"/>
-                                    <popUpButtonCell key="cell" type="push" title="C Family" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="u8T-QI-IjJ" id="VMz-LF-Af7">
+                                    <popUpButtonCell key="cell" type="push" title="C Family" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="OX5-aL-Yrq" id="VMz-LF-Af7">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="menu"/>
                                         <menu key="menu" id="v99-wQ-Yqx">
                                             <items>
-                                                <menuItem title="C Family" state="on" id="u8T-QI-IjJ">
+                                                <menuItem title="Arendelle" id="u8T-QI-IjJ">
                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                     <connections>
-                                                        <action selector="OnLanC:" target="-2" id="Wpq-3Y-FWt"/>
+                                                        <action selector="OnLangArendelle:" target="-2" id="kFx-zD-EPe"/>
+                                                    </connections>
+                                                </menuItem>
+                                                <menuItem title="C Family" state="on" id="OX5-aL-Yrq">
+                                                    <modifierMask key="keyEquivalentModifierMask"/>
+                                                    <connections>
+                                                        <action selector="OnLanC:" target="-2" id="kru-OI-gQa"/>
                                                     </connections>
                                                 </menuItem>
                                                 <menuItem title="Python Family" id="ZqU-EX-coe">
@@ -1002,16 +1018,6 @@
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ze-QJ-Aok">
-                        <rect key="frame" x="171" y="564" width="73" height="32"/>
-                        <buttonCell key="cell" type="push" title="Copy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zSq-UF-vZW">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="OnCopyResult:" target="-2" id="ded-LZ-w7W"/>
-                        </connections>
-                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Hb8-SS-cmu" secondAttribute="bottom" id="0Ac-K5-FV4"/>

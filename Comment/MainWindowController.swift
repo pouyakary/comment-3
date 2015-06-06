@@ -128,6 +128,20 @@ class MainWindowController: NSWindowController {
     // ─── LANGUAGE CHOOSER ACTIONS ────────────────────────────────────────────────────────────────
     //
     
+        @IBAction func OnLangArendelle(sender: AnyObject) {
+            
+            MultiLineCommentStart.stringValue = "*-"
+            MultiLineCommentEnd.stringValue = "-*"
+            MultiLineCommentMidLineStart.stringValue = " -"
+            MultiLineCommentMidLineEnd.stringValue = "-"
+            InlineComment.stringValue = "--"
+            
+        }
+    
+    
+    // ─────────────────────────────────────────────────────────────────────────────────────────────
+    
+    
         @IBAction func OnLanC(sender: NSMenuItem) {
         
             MultiLineCommentStart.stringValue = "/*"
