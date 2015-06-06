@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import AppKit
 
 /* ─────────────────────────────────────────────────────────────────────────────────────────────────── *
  * :::::::::::::::::::: C O M M E N T   M A I N W I N D O W   C O N T R O L L E R :::::::::::::::::::: *
@@ -36,17 +37,24 @@ class MainWindowController: NSWindowController {
     //
     
         @IBOutlet weak var QuickLanguageChooser: NSPopUpButton!
-        @IBOutlet weak var MultiLineCommentStart: NSComboBox!
-        @IBOutlet weak var MultiLineCommentEnd: NSComboBox!
-        @IBOutlet weak var MultiLineCommentMidLineStart: NSComboBox!
-        @IBOutlet weak var MultiLineCommentMidLineEnd: NSComboBox!
-        @IBOutlet weak var InlineComment: NSComboBox!
+        @IBOutlet weak var MultiLineCommentStart: NSTextField!
+        @IBOutlet weak var MultiLineCommentEnd: NSTextField!
+        @IBOutlet weak var MultiLineCommentMidLineStart: NSTextField!
+        @IBOutlet weak var MultiLineCommentMidLineEnd: NSTextField!
+        @IBOutlet weak var InlineComment: NSTextField!
+    
     
     //
     // ─── RESULT VIEW SETTINGS ────────────────────────────────────────────────────────────────────
     //
     
         @IBOutlet var ResultView: NSTextView!
+    
+    
+    // ─────────────────────────────────────────────────────────────────────────────────────────────
+    
+    
+        var style = "Subsection"
     
     
     // ─────────────────────────────────────────────────────────────────────────────────────────────
@@ -69,6 +77,8 @@ class MainWindowController: NSWindowController {
     
         @IBAction func OnStyleSubsection(sender: AnyObject) {
         
+            style = "Subsection"
+            Comment.enabled = true
             CommentSize.enabled = true
             CommentSection.enabled = false
         
@@ -80,6 +90,7 @@ class MainWindowController: NSWindowController {
     
         @IBAction func OnStyleSection(sender: AnyObject) {
             
+            style = "Section"
             Comment.enabled = true
             CommentSize.enabled = false
             CommentSection.enabled = true
@@ -92,6 +103,7 @@ class MainWindowController: NSWindowController {
     
         @IBAction func OnStyleClass(sender: AnyObject) {
             
+            style = "Class"
             Comment.enabled = true
             CommentSize.enabled = true
             CommentSection.enabled = false
@@ -104,12 +116,14 @@ class MainWindowController: NSWindowController {
     
         @IBAction func OnSyleLine(sender: AnyObject) {
             
+            style = "Line"
             Comment.enabled = false
             CommentSize.enabled = true
             CommentSection.enabled = false
             
         }
 
+    
     //
     // ─── LANGUAGE CHOOSER ACTIONS ────────────────────────────────────────────────────────────────
     //
@@ -138,21 +152,22 @@ class MainWindowController: NSWindowController {
         
         }
     
+    
     //
     // ─── BUTTON ACTIONS ──────────────────────────────────────────────────────────────────────────
     //
     
-        @IBAction func OnGenerateComment(sender: AnyObject) {
- 
+        @IBAction func OnGenerate(sender: NSButton) {
+            
             //
             // SETTINGS
             //
             
             let settings = LanguageSettings(MultiLineCommentStart: MultiLineCommentStart.stringValue,
-                                              MultiLineCommentEnd: MultiLineCommentEnd.stringValue,
-                                     MultiLineCommentMidLineStart: MultiLineCommentMidLineStart.stringValue,
-                                       MultiLineCommentMidLineEnd: MultiLineCommentMidLineEnd.stringValue,
-                                                    InlineComment: InlineComment.stringValue)
+                MultiLineCommentEnd: MultiLineCommentEnd.stringValue,
+                MultiLineCommentMidLineStart: MultiLineCommentMidLineStart.stringValue,
+                MultiLineCommentMidLineEnd: MultiLineCommentMidLineEnd.stringValue,
+                InlineComment: InlineComment.stringValue)
             
             let comment_size = CommentSize.stringValue.toInt()!
             let comment_section = CommentSection.stringValue.toInt()!
@@ -162,17 +177,18 @@ class MainWindowController: NSWindowController {
             // GENERATING THE COMMENT
             //
             
-            ResultView.string = GenerateComment(Comment.stringValue, comment_size, comment_section, settings)
+            ResultView.string = GenerateComment(Comment.stringValue, comment_size, comment_section, settings, style)
             
         }
-    
     
     // ─────────────────────────────────────────────────────────────────────────────────────────────
     
     
-        @IBAction func OnCleanPad(sender: NSButton) {
-            
-            ResultView.string = ""
+        @IBAction func OnCopyResult(sender: NSButton) {
+    
+            let pasteboard = NSPasteboard.generalPasteboard()
+            pasteboard.clearContents()
+            pasteboard.setString(ResultView.string!, forType: NSPasteboardTypeString)
             
         }
     

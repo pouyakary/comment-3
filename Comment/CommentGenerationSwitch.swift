@@ -8,8 +8,36 @@
 
 import Foundation
 
-func GenerateComment (comment: String, size: Int, section: Int, Settings: LanguageSettings) -> String {
+func GenerateComment (comment: String, size: Int, section: Int, settings: LanguageSettings, style: String) -> String {
 
-    return ""
+    var result: String = "\n"
+    
+    // ─────────────────────────────────────────────────────────────────────────────────────────────
+    
+    
+        switch style {
+        
+        case "Class":
+            
+            result += StyleClass(comment, size, settings)
+            
+        case "Subsection":
+            
+            result += StyleSubSection(comment, size, settings)
+            
+        case "Section":
+            
+            result += StyleSection(comment, size, section, settings)
+            
+        default:
+        
+            result += StyleLine(size, settings)
+            
+        }
+    
+    
+    // ─────────────────────────────────────────────────────────────────────────────────────────────
+    
+    return result
 
 }

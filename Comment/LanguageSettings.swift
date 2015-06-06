@@ -23,20 +23,4 @@ struct LanguageSettings {
         let InlineComment: String
     
     // ─────────────────────────────────────────────────────────────────────────────────────────────
-    
-        init (MultiLineCommentStart: String,
-                MultiLineCommentEnd: String,
-       MultiLineCommentMidLineStart: String,
-         MultiLineCommentMidLineEnd: String,
-                      InlineComment: String) {
-        
-            self.MultiLineCommentStart = MultiLineCommentStart
-            self.MultiLineCommentEnd = MultiLineCommentEnd
-            self.MultiLineCommentMidLineStart = MultiLineCommentMidLineStart
-            self.MultiLineCommentMidLineEnd = MultiLineCommentMidLineEnd
-            self.InlineComment = InlineComment
-            
-        }
-    
-    // ─────────────────────────────────────────────────────────────────────────────────────────────
 }
