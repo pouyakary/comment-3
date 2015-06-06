@@ -157,7 +157,7 @@ class MainWindowController: NSWindowController {
     // ─── BUTTON ACTIONS ──────────────────────────────────────────────────────────────────────────
     //
     
-        @IBAction func OnGenerate(sender: NSButton) {
+        @IBAction func OnGenerate(sender: AnyObject) {
             
             //
             // SETTINGS

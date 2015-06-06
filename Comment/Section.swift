@@ -8,6 +8,10 @@
 
 import Foundation
 
+/* ──────────────────────────────────────────────────────────────────────────────── *
+ * ::::::::::::::::::: C O M M E N T   S T Y L E   S E C T I O N :::::::::::::::::: *
+ * ──────────────────────────────────────────────────────────────────────────────── */
+
 func StyleSection (comment: String, size: Int, section: Int, settings: LanguageSettings) -> String {
     
     var result = ""
@@ -15,39 +19,38 @@ func StyleSection (comment: String, size: Int, section: Int, settings: LanguageS
     
     
     //
-    // LINE ONE
+    // ─── LINE ONE ───────────────────────────────────────────────────────────────────
     //
-    
-    result += "\(settings.InlineComment)\n"
-    
-    
-    //
-    // LINE TWO
-    //
-    
-    result += "\(settings.InlineComment) \(MakeLine(39 + comment_text.utf16Count)) \(section) ─────────\n"
-    
+
+        result += "\(settings.InlineComment)\n"
     
     //
-    // LINE THREE
+    // ─── LINE TWO ───────────────────────────────────────────────────────────────────
     //
-    
-    result += "\(settings.InlineComment)  ::::::\(comment_text): :  :  :   :     :        :          :\n"
-    
-    
-    //
-    // LINE FOUR
-    //
-    
-    result += "\(settings.InlineComment) \(MakeLine(48 + comment_text.utf16Count))\n"
-    
+
+        result += "\(settings.InlineComment) \(MakeLine(39 + comment_text.utf16Count)) \(section) ─────────\n"
     
     //
-    // LINE FIVE
+    // ─── LINE THREE ─────────────────────────────────────────────────────────────────
+    //
+
+        result += "\(settings.InlineComment)  ::::::\(comment_text): :  :  :   :     :        :          :\n"
+    
+    //
+    // ─── LINE FOUR ──────────────────────────────────────────────────────────────────
+    //
+
+        result += "\(settings.InlineComment) \(MakeLine(48 + comment_text.utf16Count))\n"
+    
+    //
+    // ─── LINE FIVE ──────────────────────────────────────────────────────────────────
     //
     
-    result += "\(settings.InlineComment)\n"
+        result += "\(settings.InlineComment)\n"
     
+    
+    // ────────────────────────────────────────────────────────────────────────────────
+
     
     return result
 }

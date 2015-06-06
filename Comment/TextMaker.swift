@@ -8,16 +8,32 @@
 
 import Foundation
 
+/* ──────────────────────────────────────────────────────────────────────────────── *
+ * :::::::::::::::::::::: C O M M E N T   M A K E   T I T L E ::::::::::::::::::::: *
+ * ──────────────────────────────────────────────────────────────────────────────── */
+
 func MakeTitle (text: String) -> String {
 
-    var result = " "
-    var letters = Array (text)
+    
+    //
+    // ─── SPACES ─────────────────────────────────────────────────────────────────────
+    //
+    
+        var result = " "
+        var letters = Array (text)
+    
+    //
+    // ─── BODY ───────────────────────────────────────────────────────────────────────
+    //
 
-    for letter in letters {
+        for letter in letters {
         
-        result += "\(letter) ".uppercaseString
+            result += "\(letter) ".uppercaseString
         
-    }
+        }
+    
+    
+    // ─────────────────────────────────────────────────────────────────────────────────
 
     return result
 }

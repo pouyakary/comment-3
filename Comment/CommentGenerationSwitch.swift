@@ -8,6 +8,10 @@
 
 import Foundation
 
+/* ──────────────────────────────────────────────────────────────────────────────── *
+ * :::::::::::::::: C O M M E N T   G E N E R A T E   C O M M E N T ::::::::::::::: *
+ * ──────────────────────────────────────────────────────────────────────────────── */
+
 func GenerateComment (comment: String, size: Int, section: Int, settings: LanguageSettings, style: String) -> String {
 
     var result: String = "\n"

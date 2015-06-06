@@ -8,29 +8,47 @@
 
 import Foundation
 
+/* ──────────────────────────────────────────────────────────────────────────────── *
+ * :::::::::::::::: C O M M E N T   S T Y L E   S U B S E C T I O N ::::::::::::::: *
+ * ──────────────────────────────────────────────────────────────────────────────── */
+
 func StyleSubSection (comment: String, size: Int, settings: LanguageSettings) -> String {
     
     var result = ""
     
-    //
-    // LINE ONE
-    //
-    
-    result += "\(settings.InlineComment)\n"
-    
     
     //
-    // LINE TWO
+    // ─── LINE ONE ───────────────────────────────────────────────────────────────────
     //
-    
-    result += "\(settings.InlineComment) ─── \(comment.uppercaseString) \(MakeLine(size - 5 - comment.utf16Count))\n"
-    
+
+        result += "\(settings.InlineComment)\n"
     
     //
-    // LINE THREE
+    // ─── LINE TWO ───────────────────────────────────────────────────────────────────
     //
+
+        result += "\(settings.InlineComment) ─── \(comment.uppercaseString) \(MakeLine(size - 5 - comment.utf16Count))\n"
     
-    result += "\(settings.InlineComment)\n"
+    //
+    // ─── LINE THREE ─────────────────────────────────────────────────────────────────
+    //
+
+        result += "\(settings.InlineComment)\n"
+    
+    
+    // ────────────────────────────────────────────────────────────────────────────────
+
     
     return result
 }
+
+
+
+
+
+
+
+
+
+
+

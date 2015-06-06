@@ -8,46 +8,75 @@
 
 import Foundation
 
+/* ──────────────────────────────────────────────────────────────────────────────── *
+ * ::::::::::::::::::::: C O M M E N T   S T Y L E   C L A S S :::::::::::::::::::: *
+ * ──────────────────────────────────────────────────────────────────────────────── */
+
 func StyleClass (comment: String, size: Int, settings: LanguageSettings) -> String {
 
     var result = ""
     
     //
-    // LINE ONE
+    // ─── LINE ONE ───────────────────────────────────────────────────────────────────
+    //
+
+    
+        result += "\(settings.MultiLineCommentStart) \(MakeLine(size)) \(settings.MultiLineCommentMidLineEnd)\n"
+    
+    
+    //
+    // ─── LINE TWO ───────────────────────────────────────────────────────────────────
     //
     
-    result += "\(settings.MultiLineCommentStart) \(MakeLine(size)) \(settings.MultiLineCommentMidLineEnd)\n"
+        //
+        // WHAT WE NEED TO GENERATE
+        //
+
+        var comment_text = MakeTitle(comment)
+        var dots = ""
+        var case_of_short_lenght = ""
     
     
-    //
-    // LINE TWO
-    //
+        //
+        // IF THE SIZE - COMMENT TEXT SIZE MODE 2 BE 1 IT MEANS IF THE COMMENT
+        // BE GENERATED THE RESULT WILL BE MISSING ONE ":", SO THIS IS HWAT WE
+        // WE SIMPLY DO TO AVOID IT.
+        //
     
-    var comment_text = MakeTitle(comment)
-    var dots = ""
-    var case_of_short_lenght = ""
-    
-    if (size - comment_text.utf16Count) % 2 == 1 {
+        if (size - comment_text.utf16Count) % 2 == 1 {
         
-        case_of_short_lenght = ":"
+            case_of_short_lenght = ":"
         
-    }
+        }
     
-    for var i = 0; i < ( size - comment_text.utf16Count ) / 2; i++ {
-        
-        dots += ":"
-        
-    }
     
-    result += "\(settings.MultiLineCommentMidLineStart) \(case_of_short_lenght)\(dots)\(comment_text)\(dots) \(settings.MultiLineCommentMidLineEnd)\n"
+        //
+        // GENERATING THE DOTS BEFORE AND AFTER THE COMMENT TEXT
+        //
+    
+        for var i = 0; i < ( size - comment_text.utf16Count ) / 2; i++ {
+        
+            dots += ":"
+        
+        }
+    
+    
+        //
+        // GENERATING THE LINE
+        //
+    
+        result += "\(settings.MultiLineCommentMidLineStart) \(case_of_short_lenght)\(dots)\(comment_text)\(dots) \(settings.MultiLineCommentMidLineEnd)\n"
     
     
     //
-    // LINE THREE
+    // ─── LINE THREE ─────────────────────────────────────────────────────────────────
     //
+
     
-    result += "\(settings.MultiLineCommentMidLineStart) \(MakeLine(size)) \(settings.MultiLineCommentEnd)\n"
+        result += "\(settings.MultiLineCommentMidLineStart) \(MakeLine(size)) \(settings.MultiLineCommentEnd)\n"
     
+    
+    // ────────────────────────────────────────────────────────────────────────────────
     
     return result
 

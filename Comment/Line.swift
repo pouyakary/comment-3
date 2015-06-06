@@ -8,6 +8,10 @@
 
 import Foundation
 
+/* ──────────────────────────────────────────────────────────────────────────────── *
+ * :::::::::::::::::::::: C O M M E N T   S T Y L E   L I N E ::::::::::::::::::::: *
+ * ──────────────────────────────────────────────────────────────────────────────── */
+
 func StyleLine (size: Int, comment: LanguageSettings) -> String {
     
     return "\(comment.InlineComment) \(MakeLine(size))\n"
