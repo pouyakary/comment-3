@@ -27,8 +27,8 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="Comment" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+        <window title="Comment" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="960" height="605"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
@@ -120,9 +120,9 @@
                             <action selector="OnGenerate:" target="-2" id="fFt-yv-xdf"/>
                         </connections>
                     </button>
-                    <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hb8-SS-cmu">
+                    <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hb8-SS-cmu">
                         <rect key="frame" x="260" y="0.0" width="700" height="605"/>
-                        <clipView key="contentView" id="HKj-32-tj0">
+                        <clipView key="contentView" copiesOnScroll="NO" id="HKj-32-tj0">
                             <rect key="frame" x="1" y="1" width="223" height="133"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -130,7 +130,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="223" height="605"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="textColor" red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="backgroundColor" red="0.090196078431372548" green="0.090196078431372548" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <size key="minSize" width="700" height="605"/>
                                     <size key="maxSize" width="834" height="10000000"/>
                                     <attributedString key="textStorage">
@@ -875,7 +875,7 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </clipView>
-                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="zdc-UZ-k8F">
+                        <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="zdc-UZ-k8F">
                             <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
@@ -1033,7 +1033,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="374" y="478.5"/>
+            <point key="canvasLocation" x="390" y="490.5"/>
         </window>
     </objects>
 </document>

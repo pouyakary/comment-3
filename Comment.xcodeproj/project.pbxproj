@@ -17,7 +17,6 @@
 		A6E962661B21982600DC0297 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E962651B21982600DC0297 /* AppDelegate.swift */; };
 		A6E962681B21982600DC0297 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6E962671B21982600DC0297 /* Images.xcassets */; };
 		A6E9626B1B21982600DC0297 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E962691B21982600DC0297 /* MainMenu.xib */; };
-		A6E962771B21982600DC0297 /* CommentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E962761B21982600DC0297 /* CommentTests.swift */; };
 		A6E962821B21986900DC0297 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E962801B21986900DC0297 /* MainWindowController.swift */; };
 		A6E962831B21986900DC0297 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E962811B21986900DC0297 /* MainWindowController.xib */; };
 		A6E962871B21D67A00DC0297 /* LanguageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E962861B21D67A00DC0297 /* LanguageSettings.swift */; };
@@ -48,7 +47,6 @@
 		A6E9626A1B21982600DC0297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A6E962701B21982600DC0297 /* CommentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E962751B21982600DC0297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A6E962761B21982600DC0297 /* CommentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTests.swift; sourceTree = "<group>"; };
 		A6E962801B21986900DC0297 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		A6E962811B21986900DC0297 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 		A6E962861B21D67A00DC0297 /* LanguageSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageSettings.swift; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 		A6E962731B21982600DC0297 /* CommentTests */ = {
 			isa = PBXGroup;
 			children = (
-				A6E962761B21982600DC0297 /* CommentTests.swift */,
 				A6E962741B21982600DC0297 /* Supporting Files */,
 			);
 			path = CommentTests;
@@ -269,7 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6E962771B21982600DC0297 /* CommentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
