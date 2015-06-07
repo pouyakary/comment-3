@@ -130,10 +130,13 @@ class MainWindowController: NSWindowController {
     
         @IBAction func OnLangArendelle(sender: AnyObject) {
             
+            CommentSize.stringValue = "55"
+            
             MultiLineCommentStart.stringValue = "*-"
             MultiLineCommentEnd.stringValue = "-*"
             MultiLineCommentMidLineStart.stringValue = " -"
             MultiLineCommentMidLineEnd.stringValue = "-"
+            
             InlineComment.stringValue = "--"
             
         }
@@ -143,11 +146,14 @@ class MainWindowController: NSWindowController {
     
     
         @IBAction func OnLanC(sender: NSMenuItem) {
+            
+            CommentSize.stringValue = "80"
         
             MultiLineCommentStart.stringValue = "/*"
             MultiLineCommentEnd.stringValue = "*/"
             MultiLineCommentMidLineStart.stringValue = " *"
             MultiLineCommentMidLineEnd.stringValue = "*"
+            
             InlineComment.stringValue = "//"
         
         }
@@ -157,11 +163,14 @@ class MainWindowController: NSWindowController {
     
     
         @IBAction func OnLangPython(sender: NSMenuItem) {
+            
+            CommentSize.stringValue = "80"
         
             MultiLineCommentStart.stringValue = "#"
             MultiLineCommentEnd.stringValue = "#"
             MultiLineCommentMidLineStart.stringValue = "#"
             MultiLineCommentMidLineEnd.stringValue = "#"
+            
             InlineComment.stringValue = "#"
         
         }
