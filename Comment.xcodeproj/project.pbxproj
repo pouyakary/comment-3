@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A648B47F1B22702B00C1FE3D /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A648B47E1B22702B00C1FE3D /* Section.swift */; };
 		A6620ACA1B21E80A008E75E2 /* CommentGenerationSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6620AC91B21E80A008E75E2 /* CommentGenerationSwitch.swift */; };
+		A674E8531B2493C7009E75A8 /* *3.png in Resources */ = {isa = PBXBuildFile; fileRef = A674E8521B2493C7009E75A8 /* *3.png */; };
+		A674E8591B249CCD009E75A8 /* The Kary Horse.png in Resources */ = {isa = PBXBuildFile; fileRef = A674E8581B249CCD009E75A8 /* The Kary Horse.png */; };
 		A6AC51551B22604E009FB777 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AC51541B22604E009FB777 /* Class.swift */; };
 		A6AC51571B226101009FB777 /* TextMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AC51561B226101009FB777 /* TextMaker.swift */; };
 		A6AC51591B226299009FB777 /* LineMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AC51581B226299009FB777 /* LineMaker.swift */; };
@@ -35,6 +37,8 @@
 /* Begin PBXFileReference section */
 		A648B47E1B22702B00C1FE3D /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		A6620AC91B21E80A008E75E2 /* CommentGenerationSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentGenerationSwitch.swift; sourceTree = "<group>"; };
+		A674E8521B2493C7009E75A8 /* *3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "*3.png"; sourceTree = "<group>"; };
+		A674E8581B249CCD009E75A8 /* The Kary Horse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The Kary Horse.png"; sourceTree = "<group>"; };
 		A6AC51541B22604E009FB777 /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		A6AC51561B226101009FB777 /* TextMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextMaker.swift; sourceTree = "<group>"; };
 		A6AC51581B226299009FB777 /* LineMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineMaker.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				A6E962651B21982600DC0297 /* AppDelegate.swift */,
 				A6E962671B21982600DC0297 /* Images.xcassets */,
 				A6E962691B21982600DC0297 /* MainMenu.xib */,
+				A674E8521B2493C7009E75A8 /* *3.png */,
+				A674E8581B249CCD009E75A8 /* The Kary Horse.png */,
 				A6E962631B21982600DC0297 /* Supporting Files */,
 				A6E962801B21986900DC0297 /* MainWindowController.swift */,
 				A6E962811B21986900DC0297 /* MainWindowController.xib */,
@@ -231,6 +237,8 @@
 			files = (
 				A6E962681B21982600DC0297 /* Images.xcassets in Resources */,
 				A6E962831B21986900DC0297 /* MainWindowController.xib in Resources */,
+				A674E8531B2493C7009E75A8 /* *3.png in Resources */,
+				A674E8591B249CCD009E75A8 /* The Kary Horse.png in Resources */,
 				A6E9626B1B21982600DC0297 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

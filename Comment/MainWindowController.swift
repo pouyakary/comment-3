@@ -48,7 +48,7 @@ class MainWindowController: NSWindowController {
     // ─── RESULT VIEW SETTINGS ────────────────────────────────────────────────────────────────────
     //
     
-        @IBOutlet var ResultView: NSTextView!
+        @IBOutlet weak var ResultView: NSTextField!
     
     
     // ─────────────────────────────────────────────────────────────────────────────────────────────
@@ -212,7 +212,7 @@ class MainWindowController: NSWindowController {
             // GENERATING THE COMMENT
             //
             
-            ResultView.string = GenerateComment(Comment.stringValue, comment_size, comment_section, settings, style)
+            ResultView.stringValue = GenerateComment(Comment.stringValue, comment_size, comment_section, settings, style)
             
         }
     
@@ -223,7 +223,7 @@ class MainWindowController: NSWindowController {
     
             let pasteboard = NSPasteboard.generalPasteboard()
             pasteboard.clearContents()
-            pasteboard.setString(ResultView.string!, forType: NSPasteboardTypeString)
+            pasteboard.setString(ResultView.stringValue, forType: NSPasteboardTypeString)
             
         }
     
