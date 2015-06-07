@@ -128,16 +128,31 @@ class MainWindowController: NSWindowController {
     // ─── LANGUAGE CHOOSER ACTIONS ────────────────────────────────────────────────────────────────
     //
     
+        func SetLanguageSettings (Fsize: String, FMulitLineCommentStart: String, FMultiLineCommentEnd: String, FMuliLineCommentMidLineStart: String, FMultiLineCommentMidLineEnd: String, FInlineComment: String) {
+        
+            CommentSize.stringValue = Fsize
+        
+            MultiLineCommentStart.stringValue = FMulitLineCommentStart
+            MultiLineCommentEnd.stringValue = FMultiLineCommentEnd
+            MultiLineCommentMidLineStart.stringValue = FMuliLineCommentMidLineStart
+            MultiLineCommentMidLineEnd.stringValue = FMultiLineCommentMidLineEnd
+        
+            InlineComment.stringValue = FInlineComment
+        
+        }
+    
+    
+    // ─────────────────────────────────────────────────────────────────────────────────────────────
+    
+    
         @IBAction func OnLangArendelle(sender: AnyObject) {
             
-            CommentSize.stringValue = "55"
-            
-            MultiLineCommentStart.stringValue = "*-"
-            MultiLineCommentEnd.stringValue = "-*"
-            MultiLineCommentMidLineStart.stringValue = " -"
-            MultiLineCommentMidLineEnd.stringValue = "-"
-            
-            InlineComment.stringValue = "--"
+            SetLanguageSettings("55",
+                FMulitLineCommentStart: "*-",
+                FMultiLineCommentEnd: "-*",
+                FMuliLineCommentMidLineStart: " -",
+                FMultiLineCommentMidLineEnd: "-",
+                FInlineComment: "--")
             
         }
     
@@ -147,14 +162,12 @@ class MainWindowController: NSWindowController {
     
         @IBAction func OnLanC(sender: NSMenuItem) {
             
-            CommentSize.stringValue = "80"
-        
-            MultiLineCommentStart.stringValue = "/*"
-            MultiLineCommentEnd.stringValue = "*/"
-            MultiLineCommentMidLineStart.stringValue = " *"
-            MultiLineCommentMidLineEnd.stringValue = "*"
-            
-            InlineComment.stringValue = "//"
+            SetLanguageSettings("80",
+                FMulitLineCommentStart: "/*",
+                FMultiLineCommentEnd: "*/",
+                FMuliLineCommentMidLineStart: " *",
+                FMultiLineCommentMidLineEnd: "*",
+                FInlineComment: "//")
         
         }
     
@@ -164,14 +177,13 @@ class MainWindowController: NSWindowController {
     
         @IBAction func OnLangPython(sender: NSMenuItem) {
             
-            CommentSize.stringValue = "80"
-        
-            MultiLineCommentStart.stringValue = "#"
-            MultiLineCommentEnd.stringValue = "#"
-            MultiLineCommentMidLineStart.stringValue = "#"
-            MultiLineCommentMidLineEnd.stringValue = "#"
-            
-            InlineComment.stringValue = "#"
+            SetLanguageSettings("80",
+                FMulitLineCommentStart: "#",
+                FMultiLineCommentEnd: "#",
+                FMuliLineCommentMidLineStart: "#",
+                FMultiLineCommentMidLineEnd: "#",
+                FInlineComment: "#")
+
         
         }
     
