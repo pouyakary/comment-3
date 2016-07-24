@@ -1,3 +1,5 @@
+[![](http://www.karyfoundation.org/developer/dead-repo/gitbadge.png)](http://www.karyfoundation.org/developer/dead-repo/)
+
 
 <img src="readmeicon.png" width="125">
 
